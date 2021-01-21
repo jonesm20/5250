@@ -7,6 +7,7 @@ namespace Mine.Models
     public enum MenuItemType
     {
         Items,
+        Game,
         About
     }
     public class HomeMenuItem
