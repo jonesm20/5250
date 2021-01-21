@@ -2,8 +2,10 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Mine.Views.GamePage">
    <StackLayout VerticalOptions="CenterAndExpand"
                 HorizontalOptions="CenterAndExpand">
-        <Frame>
             <Label Text="Welcome to my Homework!" HorizontalTextAlignment="Center" TextColor="Black" FontSize="Large"/>
-        </Frame>
+            <Image Source="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Seattle_Redhawks_logo.svg/914px-Seattle_Redhawks_logo.svg.png"
+                   HeightRequest="200"
+                   WidthRequest="200"
+                   />
     </StackLayout>
 </ContentPage>
