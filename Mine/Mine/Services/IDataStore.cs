@@ -9,7 +9,7 @@ namespace Mine.Services
         Task<bool> CreateAsync(T item);
         Task<bool> UpdateAsync(T item);
         Task<bool> DeleteAsync(string id);
-        Task<T> GetItemAsync(string id);
+        Task<T> IndexAsync(string id);
         Task<IEnumerable<T>> GetItemsAsync(bool forceRefresh = false);
     }
 }
