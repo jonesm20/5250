@@ -6,7 +6,7 @@ using Xamarin.Forms.Xaml;
 using Mine.Models;
 using Mine.ViewModels;
 
-namespace Mine.Views
+namespace Mine.Views.Items
 {
     // Learn more about making custom code visible in the Xamarin.Forms previewer
     // by visiting https://aka.ms/xamarinforms-previewer
@@ -22,6 +22,7 @@ namespace Mine.Views
             BindingContext = this.viewModel = viewModel;
         }
 
+
         public ItemReadPage()
         {
             InitializeComponent();
@@ -34,6 +35,17 @@ namespace Mine.Views
 
             viewModel = new ItemReadViewModel(item);
             BindingContext = viewModel;
+        }
+
+        /// <summary>
+        /// Open the delete page for this item
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public async void DeleteItem_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new NavigationPage(new ItemDeletePage(viewModel)));
+            await Navigation.PopAsync();
         }
     }
 }

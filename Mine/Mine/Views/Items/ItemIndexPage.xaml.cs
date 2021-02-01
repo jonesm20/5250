@@ -11,7 +11,7 @@ using Mine.Models;
 using Mine.Views;
 using Mine.ViewModels;
 
-namespace Mine.Views
+namespace Mine.Views.Items
 {
     // Learn more about making custom code visible in the Xamarin.Forms previewer
     // by visiting https://aka.ms/xamarinforms-previewer

@@ -28,7 +28,7 @@ namespace Mine.Views
                 switch (id)
                 {
                     case (int)MenuItemType.Items:
-                        MenuPages.Add(id, new NavigationPage(new ItemIndexPage()));
+                        MenuPages.Add(id, new NavigationPage(new Items.ItemIndexPage()));
                         break;
                     case (int)MenuItemType.About:
                         MenuPages.Add(id, new NavigationPage(new AboutPage()));
