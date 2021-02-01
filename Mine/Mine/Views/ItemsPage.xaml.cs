@@ -8,7 +8,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 using Mine.Models;
-using Mine.Views;
+using Mine.Views.Items;
 using Mine.ViewModels;
 
 namespace Mine.Views
@@ -33,7 +33,7 @@ namespace Mine.Views
             if (item == null)
                 return;
 
-            await Navigation.PushAsync(new ItemDetailPage(new ItemReadViewModel(item)));
+            await Navigation.PushAsync(new ItemReadPage(new ItemReadViewModel(item)));
 
             // Manually deselect item.
             ItemsListView.SelectedItem = null;

@@ -6,7 +6,7 @@ using Xamarin.Forms.Xaml;
 
 using Mine.Models;
 
-namespace Mine.Views
+namespace Mine.Views.Items
 {
     // Learn more about making custom code visible in the Xamarin.Forms previewer
     // by visiting https://aka.ms/xamarinforms-previewer
