@@ -5,6 +5,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 using Mine.Models;
+using Mine.ViewModels;
 
 namespace Mine.Views.Items
 {
@@ -15,15 +16,11 @@ namespace Mine.Views.Items
     {
         public ItemModel Item { get; set; }
 
-        public ItemUpdatePage()
+        public ItemUpdatePage(ItemReadViewModel viewModel)
         {
             InitializeComponent();
 
-            Item = new ItemModel
-            {
-                Text = "Item name",
-                Description = "This is an item description."
-            };
+            Item = viewModel.Item;
 
             BindingContext = this;
         }
