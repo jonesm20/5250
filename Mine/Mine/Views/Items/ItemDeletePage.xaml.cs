@@ -33,9 +33,24 @@ namespace Mine.Views.Items
             BindingContext = viewModel;
         }
 
+        /// <summary>
+        /// Open the delete page for this item
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public async void DeleteItem_Clicked(object sender, EventArgs e)
         {
             MessagingCenter.Send(this, "DeleteItem", viewModel.Item);
+            await Navigation.PopModalAsync();
+        }
+
+        /// <summary>
+        /// Cancel the Page for item
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public async void CancelItem_Clicked(object sender, EventArgs e)
+        {
             await Navigation.PopModalAsync();
         }
     }
