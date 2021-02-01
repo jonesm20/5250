@@ -7,6 +7,7 @@ using Xamarin.Forms;
 
 using Mine.Models;
 using Mine.Views;
+using Mine.Views.Items;
 
 namespace Mine.ViewModels
 {
@@ -26,6 +27,12 @@ namespace Mine.ViewModels
                 var newItem = item as ItemModel;
                 DataSet.Add(newItem);
                 await DataStore.CreateAsync(newItem);
+            });
+
+            MessagingCenter.Subscribe<ItemDeletePage, ItemModel>(this, "DeleteItem", async (obj, item) =>
+            {
+                var data = item as ItemModel;
+                await DeleteAsync(data);
             });
         }
 
