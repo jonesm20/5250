@@ -8,8 +8,8 @@
              Title="Read">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Update" Clicked="UpdateItem_Clicked"/>
-        <ToolbarItem Text="Delete" Clicked="DeleteItem_Clicked"/>
+        <ToolbarItem Text="Update" Clicked="UpdateItem_Clicked" IconImageSource="icon_update.png"/>
+        <ToolbarItem Text="Delete" Clicked="DeleteItem_Clicked" IconImageSource="icon_delete.png"/>
     </ContentPage.ToolbarItems>
 
     <StackLayout Spacing="20" Padding="15">
