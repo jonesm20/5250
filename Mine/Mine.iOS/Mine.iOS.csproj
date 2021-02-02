@@ -121,6 +121,11 @@
     <BundleResource Include="Resources\xamarin_logo%402x.png" />
     <BundleResource Include="Resources\xamarin_logo%403x.png" />
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <BundleResource Include="Resources\icon_add.png" />
+    <BundleResource Include="Resources\icon_cancel.png" />
+    <BundleResource Include="Resources\icon_delete.png" />
+    <BundleResource Include="Resources\icon_save.png" />
+    <BundleResource Include="Resources\icon_update.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
