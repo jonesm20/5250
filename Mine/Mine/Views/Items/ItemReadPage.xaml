@@ -8,6 +8,7 @@
              Title="Read">
 
     <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Update" Clicked="UpdateItem_Clicked"/>
         <ToolbarItem Text="Delete" Clicked="DeleteItem_Clicked"/>
     </ContentPage.ToolbarItems>
 

@@ -47,5 +47,16 @@ namespace Mine.Views.Items
             await Navigation.PushModalAsync(new NavigationPage(new ItemDeletePage(viewModel)));
             await Navigation.PopAsync();
         }
+
+        /// <summary>
+        /// Open the update page from the read page for Item
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public async void UpdateItem_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new NavigationPage(new ItemUpdatePage(viewModel)));
+            await Navigation.PopAsync();
+        }
     }
 }
