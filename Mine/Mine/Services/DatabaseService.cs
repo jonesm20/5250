@@ -66,5 +66,10 @@ namespace Mine.Services
         {
             throw new NotImplementedException();
         }
+
+        Task<ItemModel> IDataStore<ItemModel>.IndexAsync(string id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
