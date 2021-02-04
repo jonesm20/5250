@@ -36,6 +36,11 @@ namespace Mine.Services
             }
         }
 
+        /// <summary>
+        /// This method creates an item if it doesn't exist in the database
+        /// </summary>
+        /// <param name="item"></param>
+        /// <returns></returns>
         public async Task<bool> CreateAsync(ItemModel item)
         {
             if (item == null)
@@ -51,16 +56,39 @@ namespace Mine.Services
             return true;
         }
 
+        /// <summary>
+        /// This method reads from the database based on the given id if the item
+        /// exists in the database already
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public Task<ItemModel> ReadAsync(string id)
         {
-            throw new NotImplementedException();
+            if (id == null)
+            {
+                return null;
+            }
+
+            var result = Database.Table<ItemModel>().FirstOrDefaultAsync(m => m.Id.Equals(id));
+            return result;
         }
 
+        /// <summary>
+        /// This method updates an item if it is found in the database
+        /// </summary>
+        /// <param name="item"></param>
+        /// <returns></returns>
         public Task<bool> UpdateAsync(ItemModel item)
         {
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// This method deletes an item from the database if it already exists. Found
+        /// by the given id of the item
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public Task<bool> DeleteAsync(string id)
         {
             throw new NotImplementedException();
@@ -72,6 +100,11 @@ namespace Mine.Services
             return result;
         }
 
+        /// <summary>
+        /// This method gets items from the database
+        /// </summary>
+        /// <param name="forceRefresh"></param>
+        /// <returns></returns>
         public Task<IEnumerable<ItemModel>> GetItemsAsync(bool forceRefresh = false)
         {
             throw new NotImplementedException();
