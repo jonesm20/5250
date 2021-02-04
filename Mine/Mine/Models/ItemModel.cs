@@ -1,4 +1,5 @@
 ﻿using System;
+using SQLite;
 
 namespace Mine.Models
 {
@@ -8,7 +9,8 @@ namespace Mine.Models
     public class ItemModel
     {
         //The ID for the Item
-        public string Id { get; set; }
+        [PrimaryKey]
+        public Guid Id { get; set; } = Guid.NewGuid();
         //The Display text for the Item
         public string Text { get; set; }
         //The Description for the Item
