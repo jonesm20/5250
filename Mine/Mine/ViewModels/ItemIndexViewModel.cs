@@ -87,7 +87,7 @@ namespace Mine.ViewModels
         public async Task<bool> DeleteAsync(ItemModel data)
         {
             //check if the record exists, if it does not, then null is required
-            var record = await ReadAsync(data.Id);
+            var record = await ReadAsync(data.Id.ToString());
             if (record == null)
             {
                 return false;
@@ -97,7 +97,7 @@ namespace Mine.ViewModels
             DataSet.Remove(data);
 
             //Call to remove it from the Data Store
-            var result = await DataStore.DeleteAsync(data.Id);
+            var result = await DataStore.DeleteAsync(data.Id.ToString());
 
             return result;
         }
@@ -110,7 +110,7 @@ namespace Mine.ViewModels
         public async Task<bool> UpdateAsync(ItemModel data)
         {
             //check if the record exists, if it does not, then null is required
-            var record = await ReadAsync(data.Id);
+            var record = await ReadAsync(data.Id.ToString());
             if (record == null)
             {
                 return false;
