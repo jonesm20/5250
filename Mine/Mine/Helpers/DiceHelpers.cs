@@ -11,7 +11,7 @@ namespace Mine.Helpers
         {
             if (ForceRollsToNotRandom)
             {
-                return rolls + ForcedRandomValue;
+                return rolls * ForcedRandomValue;
             }
             if (rolls < 1)
             {
@@ -23,6 +23,7 @@ namespace Mine.Helpers
             }
 
             var myReturn = 0;
+
             for (var i = 0; i < rolls; i++)
             {
                 myReturn += rnd.Next(1, dice + 1);
