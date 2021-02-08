@@ -31,7 +31,7 @@ namespace Mine.Services
 
         public async Task<ItemModel> ReadAsync(string id)
         {
-            return await Task.FromResult(items.FirstOrDefault(s => s.Id == Guid.Parse(id)));
+            return await Task.FromResult(items.FirstOrDefault(s => s.Id == id));
         }
 
         public async Task<bool> UpdateAsync(ItemModel item)
@@ -45,7 +45,7 @@ namespace Mine.Services
 
         public async Task<bool> DeleteAsync(string id)
         {
-            var oldItem = items.Where((ItemModel arg) => arg.Id == Guid.Parse(id)).FirstOrDefault();
+            var oldItem = items.Where((ItemModel arg) => arg.Id == id).FirstOrDefault();
             items.Remove(oldItem);
 
             return await Task.FromResult(true);
@@ -53,7 +53,7 @@ namespace Mine.Services
 
         public async Task<ItemModel> IndexAsync(string id)
         {
-            return await Task.FromResult(items.FirstOrDefault(s => s.Id == Guid.Parse(id)));
+            return await Task.FromResult(items.FirstOrDefault(s => s.Id == id));
         }
 
         public async Task<IEnumerable<ItemModel>> GetItemsAsync(bool forceRefresh = false)
