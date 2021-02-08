@@ -103,12 +103,13 @@ namespace Mine.ViewModels
         }
 
         /// <summary>
-        /// Delete the record from the system if it exists
+        /// update the record from the system if it exists
         /// </summary>
         /// <param name="data"></param>
         /// <returns>bool: true if deleted</returns>
         public async Task<bool> UpdateAsync(ItemModel data)
         {
+            
             //check if the record exists, if it does not, then null is required
             var record = await ReadAsync(data.Id.ToString());
             if (record == null)
