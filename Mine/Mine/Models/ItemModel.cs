@@ -10,7 +10,7 @@ namespace Mine.Models
     {
         //The ID for the Item
         [PrimaryKey]
-        public Guid Id { get; set; } = Guid.NewGuid();
+        public string Id { get; set; } = Guid.NewGuid().ToString();
         //The Display text for the Item
         public string Text { get; set; }
         //The Description for the Item
