@@ -51,6 +51,7 @@ namespace UnitTests.Helpers
             Assert.AreEqual(true, result <= 6);
         }
 
+
         [Test]
         public void RollDice_Valid_Roll_1_Dice_6_Should_Return_Between_2_And_12()
         {
