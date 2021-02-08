@@ -12,11 +12,11 @@ namespace UnitTests.Models
             //Arrange
 
             //Act
-
+            var result = new ItemModelTests();
             //Reset
 
             //Assert
-            Assert.Pass();
+            Assert.IsNotNull(result);
         }
     }
 }
