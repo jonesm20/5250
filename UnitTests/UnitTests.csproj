@@ -15,4 +15,7 @@
   <ItemGroup>
     <Folder Include="Models\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Mine\Mine\Mine.csproj" />
+  </ItemGroup>
 </Project>
